@@ -17,3 +17,12 @@ Feature: Parameters Example
     Then status 200
     And print response
 
+   Scenario: get one spartan
+     Given url spartanUrl
+     And path "api/spartans"
+     And path '9'
+     When method get
+     Then status 200
+     And print response
+     And match response == {"gender": "Female","phone": 1702025787,"name": "Florrie", "id": 9 }
+

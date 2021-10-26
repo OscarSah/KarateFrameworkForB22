@@ -19,5 +19,21 @@ Feature: Assertions
     * match spartan_name == 'Florrie'
     * match spartan.gender == 'Female'
     * match spartan.phone == 1702025787
+
   @wip
-  Scenario:
+  Scenario: Fuzzy matching
+    * def spartan =
+  """
+      {
+    "id": 9,
+    "name": "Florrie",
+    "gender": "Female",
+    "phone": 1702025787,
+    "active": true
+       }
+      """
+    * match spartan.id == '#number'
+    * match spartan.name == '#string'
+    * match spartan.phone == '#present'
+    * match spartan.lastName == '#notpresent'
+    * match spartan.active == "#boolean"

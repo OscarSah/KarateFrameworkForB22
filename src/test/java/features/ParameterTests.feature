@@ -26,3 +26,20 @@ Feature: Parameters Example
      And print response
      And match response == {"gender": "Female","phone": 1702025787,"name": "Florrie", "id": 9 }
 
+     Scenario: query parameters
+       Given url spartanUrl
+       And path 'api/spartans/search'
+       And param nameContains = 'j'
+       And param gender = 'Female'
+       And method get
+       Then status 200
+       And match header Content-Type == 'application/json'
+       And print response
+       Then match each response.content contains { "gender": "Female"}
+       #same verfication
+       Then match each response.content[*].gender == 'Female'
+       # verify each spartan is female
+       Then match response.content[0].name == "Jaimie"
+       # verify first one is Jaimie
+       Then match each response.content[*].phone == '#number'
+       # verfiy each phone number  is  actuallly a number

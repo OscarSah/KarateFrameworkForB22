@@ -50,7 +50,7 @@ Feature: Welcome to Karate Framework
     * print spartan.gender
     * print spartan.name
 
-  @wip
+
   Scenario: how to reach array objects
       * def spartans =
       """

@@ -5,7 +5,7 @@ Feature: pet store api tests
     When method GET
     Then status 200
     And print response
-
+  @wip
     Scenario: header verification
       Given url 'https://petstore.swagger.io/v2/store/inventory'
       When method GET

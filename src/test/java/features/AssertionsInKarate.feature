@@ -36,7 +36,7 @@ Feature: Assertions
     * match spartan.phone == '#present'
     * match spartan.lastName == '#notpresent'
     * match spartan.active == "#boolean"
-  @wip
+
 
   Scenario: contains matching
     * def spartans =

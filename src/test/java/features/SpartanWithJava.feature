@@ -33,7 +33,7 @@ Feature: Karate and JAVA Integration
       Then status 201
       And match response.success == "A Spartan is Born!"
 
-
+  @wip
   Scenario: Create a spartan with RandomData from JAVA code and DELETE
     * def SDG = Java.type('utilities.SpartanDataGenerator')
     * def newSpartan = SDG.createSpartan()

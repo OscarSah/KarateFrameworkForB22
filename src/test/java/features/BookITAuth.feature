@@ -10,4 +10,5 @@ Feature: get user token
     Then status 200
     And print response
     And def token = response.accessToken
+    # this variable will be used at the second scenario
     

@@ -70,7 +70,7 @@ Scenario Outline: get token for user with CSV file
     And match response.lastName == dbResult.lastname
     And match response.role == dbResult.role
 
-  @wip
+
 
   Scenario Outline: get user information from DataBase and verify with API (2 point) Data Driven
 

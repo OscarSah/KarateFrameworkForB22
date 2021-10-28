@@ -24,12 +24,13 @@ Feature: BookIt API Tests
     And match response == studentInfo
 
 
-  @wip
+
 Scenario: get campus info and verify with the Data file (expected)
     Given url bookItUrl
-    And path api/campuses
+    And path 'api/campuses'
     And header Authorization = 'Bearer ' +accessToken
     And header Accept = 'application/json'
     When method GET
     Then status 200
-    And print response
+    And def expectedCampuses = read ('classpath:data/campuses.json')
+    And match response == expectedCampuses

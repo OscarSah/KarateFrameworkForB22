@@ -1,3 +1,4 @@
+@smoke
 Feature: Parameters Example
 
   Background:

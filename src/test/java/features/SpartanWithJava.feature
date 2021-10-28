@@ -1,3 +1,4 @@
+@smoke
 Feature: Karate and JAVA Integration
 
   Background:
